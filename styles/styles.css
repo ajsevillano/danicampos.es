@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&family=Roboto&display=swap');
+
+:root {
+  /* Variables con paleta de colores de la web */
+  --col-grey: #e8e8e8;
+  --col-white: #ffffff;
+  --col-crema: #fff8e8;
+  --col-main-red: #d52941;
+  --col-secundary-red: #d52941;
+
+  /* Variables con fuentes de la web */
+  --font-main: 'Open Sans', sans-serif;
+  --font-secundary: 'Roboto', sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--font-main);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Tipografias */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+/* Navigation */
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.6rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.5rem;
+  color: var(--col-main-red);
+  text-decoration: none;
+}
+
+/* Hero Banner */
+.hero {
+  background-color: var(--col-grey);
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0 0 0;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 750px) {
+  .hero {
+    background-color: var(--col-grey);
+    display: flex;
+    flex-direction: row;
+  }
+
+  .social,
+  .cta {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 18%;
+    margin-left: 20px;
+    justify-content: center;
+  }
+
+  .social svg {
+    padding: 30px;
+  }
+
+  .picture {
+    flex: 0 1 30%;
+  }
+
+  .cta {
+    flex: 0 1 50%;
+  }
+
+  .cta h1 {
+    font-size: 4rem;
+    color: var(--col-main-red);
+  }
+
+  .logo {
+    display: flex;
+    flex: 0 1 10%;
+  }
+  nav {
+    flex: 0 1 90%;
+  }
+}
